@@ -18,3 +18,6 @@ ls:
 'ls -a -l' un 'ls -l -a' un 'ls -la' same
 
  tree is a recursive directory listing command or program that produces a depth-indented listing of files
+
+(/home/pl/test.txt. Второй путь указывает, что в корневом каталоге есть папка home, в ней находится каталог pl, в котором имеется файл test.txt.)
+
