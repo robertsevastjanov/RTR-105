@@ -37,3 +37,22 @@ gcc is compilator
 
 (/home/pl/test.txt. Второй путь указывает, что в корневом каталоге есть папка home, в ней находится каталог pl, в котором имеется файл test.txt.)
 
+#include<stdio.h>
+int main ()
+{
+long long i,g;
+printf("Cienījamais lietotāj, lūdzu ievadi skaitli: ");
+fflush(stdout);
+scanf("%ld", &i);
+printf("Tu ievadījis skaitli: %ld\n", i);
+fflush(stdout);
+printf("Cienījamais lietotāj, lūdzu ievadi otro skaitli: ");
+fflush(stdout);
+scanf("%ld", &g);
+printf("Tu ievadījis skaitli: %ld\n", g);
+fflush(stdout);
+long long x=i*g;
+printf("Reizināšanas rezultāts ir: %ld\n ", x);
+return 0;
+
+}
