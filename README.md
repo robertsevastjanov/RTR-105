@@ -16,6 +16,9 @@ ls:
 -a do not ignore entries starting with .
 -A do not list implied . and ...
 'ls -a -l' un 'ls -l -a' un 'ls -la' same
+ls -lt большой список
+
+
 
 cd means open catalog
 cd .. one step back
@@ -30,12 +33,14 @@ text goes to file
 
 cat - to read text from file in terminal
 
-gcc is compilator
+gcc is compilator (example: gcc dialogs.c -o dialogs.out)
 ./ open program
 
  tree is a recursive directory listing command or program that produces a depth-indented listing of files
 
 (/home/pl/test.txt. Второй путь указывает, что в корневом каталоге есть папка home, в ней находится каталог pl, в котором имеется файл test.txt.)
+
+PROGRAM 1:
 
 #include<stdio.h>
 
