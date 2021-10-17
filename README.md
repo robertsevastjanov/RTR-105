@@ -77,3 +77,8 @@ printf("Reizināšanas rezultāts ir: %ld\n ", x);
 return 0;
 
 }
+
+Specifikatori
+![image](https://user-images.githubusercontent.com/47148502/137630405-f0143093-0d59-4dab-9ca7-de1a35586294.png)
+
+
