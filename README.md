@@ -99,3 +99,15 @@ char: The most basic data type in C. It stores a single character and requires a
 int: As the name suggests, an int variable is used to store an integer.
 float: It is used to store decimal numbers (numbers with floating point value) with single precision.
 double: It is used to store decimal numbers (numbers with floating point value) with double precision. 
+
+
+A format specifier for scanf follows this prototype:
+
+%[*][width][length]specifier
+
+
+Знак *, помещенный после % и перед спецификатором формата, считывает данные указанного типа, но подавляет их присваивание. Таким образом, код
+
+scanf ("%d%*c%d", &х, &у);
+
+при вводе последовательности 10/20 присваивает значение 10 переменной х, отбрасывает символ / и присваивает значение 20 переменной у.
