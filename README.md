@@ -90,3 +90,11 @@ In C programming language, printf() function is used to print the (“character,
 We use printf() function with %d format specifier to display the value of an integer variable.
 Similarly %c is used to display character, %f for float variable, %s for string variable, %lf for double and %x for hexadecimal variable.
 To generate a newline,we use “\n” in C printf() statement.
+
+
+
+DATU TIPI
+char: The most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers.
+int: As the name suggests, an int variable is used to store an integer.
+float: It is used to store decimal numbers (numbers with floating point value) with single precision.
+double: It is used to store decimal numbers (numbers with floating point value) with double precision. 
