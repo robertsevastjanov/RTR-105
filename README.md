@@ -82,3 +82,5 @@ Specifikatori
 ![image](https://user-images.githubusercontent.com/47148502/137630405-f0143093-0d59-4dab-9ca7-de1a35586294.png)
 
 
+%s - Take the next argument and print it as a string
+%d - Take the next argument and print it as an int
