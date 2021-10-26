@@ -84,3 +84,4 @@ Specifikatori
 
 %s - Take the next argument and print it as a string
 %d - Take the next argument and print it as an int
+In C, & is called the address operator. The expression &i means, "The memory address of the variable i."
