@@ -111,3 +111,42 @@ A format specifier for scanf follows this prototype:
 scanf ("%d%*c%d", &х, &у);
 
 при вводе последовательности 10/20 присваивает значение 10 переменной х, отбрасывает символ / и присваивает значение 20 переменной у.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//homework called dec2bin
+#include <stdio.h>
+#include <math.h>
+long long convert(int);
+int main() {
+char n;
+long long int bin;//what is char??? it is data type
+printf("Cienījamais lietotāj, lūdzu ievadi skaitli: ");//shows this text
+scanf("%d", &n);
+printf("Tu ievadījis skaitli: %c\n", n);
+bin = convert(n);
+printf("Decimals %c ir binarais  %lld ",n, bin);
+return 0;
+}
+long long convert(int n) {
+long long  int bin = 0;
+  int rem, i = 1;
+  while (n!=0) {
+    rem = n % 2;//ostatok
+   n /= 2;//rezultat delenia
+    bin += rem * i;//bin + ostaok * i
+   i *= 10;//prisvaivanie znachenija umnozennoe na 10
+  }
+  return bin;
+}
