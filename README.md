@@ -126,30 +126,56 @@ scanf ("%d%*c%d", &х, &у);
 
 
 //homework called dec2bin
+
 #include <stdio.h>
+
 #include <math.h>
+
 long long convert(int);
+
 int main() {
+
 char n;
+
 long long int bin;//what is char??? it is data type
+
 printf("Cienījamais lietotāj, lūdzu ievadi skaitli: ");//shows this text
+
 scanf("%d", &n);
+
 printf("Tu ievadījis skaitli: %c\n", n);
+
 bin = convert(n);
+
 printf("Decimals %c ir binarais  %lld ",n, bin);
+
 return 0;
+
 }
+
 long long convert(int n) {
+
 long long  int bin = 0;
-  int rem, i = 1;
-  while (n!=0) {
-    rem = n % 2;//ostatok
-   n /= 2;//rezultat delenia
-    bin += rem * i;//bin + ostaok * i
-   i *= 10;//prisvaivanie znachenija umnozennoe na 10
-  }
-  return bin;
+
+int rem, i = 1;
+
+while (n!=0) {
+
+rem = n % 2;//ostatok
+
+n /= 2;//rezultat delenia
+
+bin += rem * i;//bin + ostaok * i
+
+i *= 10;//prisvaivanie znachenija umnozennoe na 10
+
 }
+
+return bin;
+
+}
+
+
 
 
 
@@ -163,29 +189,56 @@ long long  int bin = 0;
 
 
 nodarbiba 06 konspekts
-  GNU nano 4.8                     homework002.c                      Изменён  
+
+GNU nano 4.8                     homework002.c                      Изменён  
+
 //datu tipi - wikipedia vai c tehniska secifikacija
+
 #include<stdio.h>
+
 int main()
- {
- char c1; //char datu tipa mainiga deklaresana
-          //turpmak koda var tikt izmantots identifikators "c1"
-          //griezoties pie c1, mes griezisimies pie noteikta 1 baita
-          //liela atminas apgabala
-          //pec deklaresanas atminas apgabala aizpildijums nav zinams
-          //0101 1110 vai 0111 0000 vai 0000 1010
+
+{
+
+char c1; //char datu tipa mainiga deklaresana
+
+//turpmak koda var tikt izmantots identifikators "c1"
+
+//griezoties pie c1, mes griezisimies pie noteikta 1 baita
+
+//liela atminas apgabala
+
+//pec deklaresanas atminas apgabala aizpildijums nav zinams
+
+//0101 1110 vai 0111 0000 vai 0000 1010
+
 printf("Statisks teksts - mainiga c1 vertiba pec deklaresanas - %d\n",c1);
+
 char c2 = 100; // char datu tipa mainiga definesana
+
 printf("Statisks teksts - mainiga c2 vertiba pec deklaresanas - %d\n",c2);
+
 //mainiga identifikatora piemers - var_count, Var_count, var_count
+
 //mainigo nosaukumos nedrikst izmantot atstarpes, domu zimes utt.
+
 c2 = 65;
+
 // atbilstosi char b(info par zimi 0+ un 1-) bbb bbbb
+
 //65 = 64 + 1 = 1*2^6+1*2^0 =  0100 0001 (viens pie 0tas un 6tas pakapes)
+
 // tas ir 42 (hex) un 101 (oct) 
+
 printf(" mainiga c2 vertiba pec jaunas pieskirsanas - %d (dec)\n",c2);
+
 printf(" mainiga c2 vertiba pec jaunas pieskirsanas - %x (hex)\n",c2);
+
 printf(" mainiga c2 vertiba pec jaunas pieskirsanas - %o (oct)\n",c2);
+
 //%c ir simbols
+
 return 0;
+
 }
+
