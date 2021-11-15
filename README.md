@@ -236,7 +236,35 @@ printf(" mainiga c2 vertiba pec jaunas pieskirsanas - %x (hex)\n",c2);
 
 printf(" mainiga c2 vertiba pec jaunas pieskirsanas - %o (oct)\n",c2);
 
+printf(" mainiga c2 vertiba pec jaunas pieskirsanas - %c (simbols)\n",c2);
+
 //%c ir simbols
+
+c2 = 0x42;
+
+printf("Mainīgā c2 vērtība pēc jaunas vērtības piešķiršanas:\n");
+
+printf("kā dec - %d, kā hex - %x, kā oct - %o, kā simbols - %c\n",c2,c2,c2,c2);
+
+c2 = 'K';
+
+printf("\nMainīgā c2 vērtība pēc jaunas vērtības piešķiršanas:\n");
+
+printf("kā dec - %d, kā hex - %x, kā oct - %o, kā simbols - %c\n",c2,c2,c2,c2);
+
+c2 = 1000;
+
+printf("\nMainīgā c2 vērtība pēc jaunas vērtības piešķiršanas:\n");
+
+printf("kā dec - %d, kā hex - %x, kā oct - %o, kā simbols - %c\n",c2,c2,c2,c2);
+
+//1000 = 512  + 256  + 128 + 64  + 32  +  8 =
+//       1*2^9+1*2^8 +1*2^7+1*2^6+1*2^5+1*2^3
+//        0000 0011  1110 1000
+//                   1|110 1000
+//                   -|001 0111
+//atbilstoši char b|bbb       1
+//65 = 64 + 1 = 1*2^6 + 1-|001 1000 => -(1*2^3 + 1*2^4) = -(24) = -24
 
 return 0;
 
