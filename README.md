@@ -428,3 +428,7 @@ int main () {
  
  
 
+
+
+https://www.javatpoint.com/how-to-run-a-c-program-in-visual-studio-code (download visual studio)
++ vars skatīties 2020 gada 1 grupas nodarbības.
