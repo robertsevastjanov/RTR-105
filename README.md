@@ -270,3 +270,94 @@ return 0;
 
 }
 
+
+
+
+
+
+
+
+
+
+
+Nodarbība 16.11
+#include<stdio.h>
+#define N 100
+ 
+int main()
+{
+char sentence[N];
+FILE * pFile;
+ 
+pFile = fopen("text.txt","r");
+if(pFile != NULL)
+ {
+ while( fscanf(pFile,"%[^\n]\ns",sentence) != EOF )
+  {
+  printf("%s\n",sentence);
+  }
+ fclose(pFile);
+ }
+ 
+return 0;
+}
+
+
+
+fwrite:
+#include<stdio.h>
+#define N 100
+ 
+int main()
+{
+int a = 10000;
+FILE * pFileTXT;
+FILE * pFileBIN;
+ 
+pFileTXT = fopen("test.txt","w");
+if(pFileTXT != NULL)
+ {
+ fprintf(pFileTXT,"%d",a);
+ fclose(pFileTXT);
+ }
+ 
+pFileBIN = fopen("test.bin","wb");
+if(pFileBIN != NULL)
+ {
+ fwrite(&a, sizeof(int), sizeof(a)/sizeof(int), pFileBIN);
+ fclose(pFileBIN);
+ }
+ 
+return 0;
+}
+
+
+
+
+
+
+fread:
+#include<stdio.h>
+#define N 100
+ 
+int main()
+{
+int a;
+FILE * pFileBIN;
+ 
+pFileBIN = fopen("test.bin","rb");
+if(pFileBIN != NULL)
+ {
+ fread(&a, sizeof(int), sizeof(a)/sizeof(int), pFileBIN);
+ fclose(pFileBIN);
+ }
+ 
+ printf("%d\n",a);
+ 
+return 0;
+}
+
+ 
+ 
+ 
+
