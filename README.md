@@ -491,3 +491,21 @@ int main () {
 
 https://www.javatpoint.com/how-to-run-a-c-program-in-visual-studio-code (download visual studio)
 + vars skatīties 2020 gada 1 grupas nodarbības.
+
+
+
+
+
+pierakts nodarbiba 18
+( funkca∗ s i n ( x )>0) // pie a=0 −> funkca=0 −> reizinaajums i r p r e c i i z i 0
+v i s u l a i k u −> v i s u l a i k a ” straadaa ” b=x
+20 a = x ;
+21 e l s e
+22 b = x ;
+23 p r i n t f ( ”%2d . i t e r a a c i j a : s i n (%7.3 f )=%7.3f \ t ” ,k , a , s i n (a) ) ;
+24 p r i n t f ( ” s i n (%7.3 f )=%7.3f \ t ” ,x , s i n ( x ) ) ;
+25 p r i n t f ( ” s i n (%7.3 f )=%7.3f \n” ,b , s i n (b) ) ;}
+26
+27 p r i n t f ( ”Saakne atrodas pie x=%.3f , jo s i n ( x ) i r %.3 f \n” ,x , s i n ( x ) ) ;
+28
+29 return 0;
