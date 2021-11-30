@@ -495,9 +495,25 @@ https://www.javatpoint.com/how-to-run-a-c-program-in-visual-studio-code (downloa
 
 
 
-
-pierakts nodarbiba 18
-( funkca∗ s i n ( x )>0) // pie a=0 −> funkca=0 −> reizinaajums i r p r e c i i z i 0
+1 #include<s t d i o . h>
+2 #include<math . h>
+3 i n t main () {
+4 f l o a t a=0.01 , b=1.5∗M_PI, x , delta_x =1.e−3/∗ 0.001 ∗/ , funkca , funkcb , funkcx ;
+5 i n t k=0;
+6
+7 funkca = s i n (a) ; funkcb = s i n (b) ;
+8 i f ( funkca∗funkcb >0){
+9 p r i n t f ( ” I n t e r v a a l a a [%.2 f ;%.2 f ] s i n ( x ) f u n k c i j a i ” ,a , b) ;
+10 p r i n t f ( ” saknju nav ( vai taajaa i r paaru saknju s k a i t s )\n” ) ;
+11 return 1;}
+12
+13 p r i n t f ( ” s i n (%7.3 f )=%7.3f \ t \ t \ t \ t ” ,a , s i n (a) ) ;
+14 p r i n t f ( ” s i n (%7.3 f )=%7.3f \n” ,b , s i n (b) ) ;
+15
+16 while (( b−a)>delta_x ){
+17 k++;//k=k+1;//k+=1;
+18 x = (a+b) / 2 . ;
+19 i f ( funkca∗ s i n ( x )>0) // pie a=0 −> funkca=0 −> reizinaajums i r p r e c i i z i 0
 v i s u l a i k u −> v i s u l a i k a ” straadaa ” b=x
 20 a = x ;
 21 e l s e
@@ -508,4 +524,4 @@ v i s u l a i k u −> v i s u l a i k a ” straadaa ” b=x
 26
 27 p r i n t f ( ”Saakne atrodas pie x=%.3f , jo s i n ( x ) i r %.3 f \n” ,x , s i n ( x ) ) ;
 28
-29 return 0;
+29 return 0;}
