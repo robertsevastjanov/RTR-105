@@ -280,48 +280,90 @@ return 0;
 
 
 nodarbība 07 konspekts
+
 kods 1:
+
 #include<stdio.h>
+
 int main()
+
 {
+
 char symbol; %c
+
 int i; //datu tipa "int" specifikators %d
+
 double d; %lf
 
+
 printf("Cienījamais lietotāj, lūdzu, ievadi vienu veselu skaitli: ");
+
 fflush(stdout);
+
 scanf("%d",&i); //funkcijai scanf ir tikai specifikators (%d), nekādas "\n"
+
 printf("Tu ievadījis skaitli: %d\n",i);
+
 fflush(stdout); //palīdz attelot datus (printf+scanf)
 
+
 printf("Cienījamais lietotāj, lūdzu, ievadi vienu simbolu: ");
+
 fflush(stdout);
+
 scanf(" %c",&symbol); //atstarpe pirms %c, citādi enter būs kā simbols 
+
 printf("Tu ievadījis skaitli: %c\n",symbol);
+
 fflush(stdout);
+
+
 
 printf("Cienījamais lietotāj, lūdzu, ievadi vienu reālu skaitli: ");
-fflush(stdout);
-scanf("%lf",&d); //kādos kompilatoros var izmantot arī %f, kompilatori ir dažādi)))
-printf("Tu ievadījis skaitli: %lf\n",d); //%3.lf\n - tad būs 3 skaitli aiz komata, bet %lf\n - tad būs 6 aiz komata
-// d = 1.e6 tas ir 1000000(!)
+
 fflush(stdout);
 
+scanf("%lf",&d); //kādos kompilatoros var izmantot arī %f, kompilatori ir dažādi)))
+
+printf("Tu ievadījis skaitli: %lf\n",d); //%3.lf\n - tad būs 3 skaitli aiz komata, bet %lf\n - tad būs 6 aiz komata
+
+// d = 1.e6 tas ir 1000000(!)
+
+fflush(stdout);
+
+
+
 return 0;
+
 }
+
 
 //undo ir Alt + U; redo ir Alt + E !!!!!
 
+
+
 kods 2 sizes.c
+
 #include<stdio.h>
+
 int main()
+
 {
+
 char c;
+
 int i;
+
 float f;
+
 double d;
 
+
+
 printf("Šis kompilators vienam char datu tipa mainīgajam piešķir %d baitus\n",sizeof(c);
+
+
+
 
 
 
