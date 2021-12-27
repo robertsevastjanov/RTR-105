@@ -180,6 +180,68 @@ return bin;
 
 
 
+program dectobin ver 2
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+unsigned char dec;
+unsigned char bin;
+printf("Enter the number to convert: ");
+scanf("%hhu", &dec);
+if (dec>255){
+printf("number is not in char data type");
+}
+else
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+printf("%hhu", dec%2);
+dec=dec/2;
+ return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
