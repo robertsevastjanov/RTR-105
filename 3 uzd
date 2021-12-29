@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+int a,b,c,d;
+printf("Enter the number to convert: ");
+fflush(stdout);
+scanf("%d", &a);
+printf("You entered: %d\n", a);
+printf("Enter the number to convert: ");
+fflush(stdout);
+scanf("%d", &b);
+printf("You entered: %d\n", b);
+printf("Enter the number to convert: ");
+fflush(stdout);
+scanf("%d", &c);
+printf("You entered: %d\n", c);
+printf("Choose order: descending - choose '0', ascending - choose '1'");
+fflush(stdout);
+scanf("%d", &d);
+if (d=0)
+{
+if (a>=b && b>=c)
+{
+printf("%d %d %d\n", a,b,c);
+}
+else if (a>=c && c>=b)
+{printf("%d %d %d\n", a,c,b);
+}
+else if (b>=a && a>=c)
+{printf("%d %d %d\n", b,a,c);
+}
+else if (b>=c && c>=a)
+{printf("%d %d %d\n", b,c,a);
+}
+else if (c>=a && a>=b)
+{printf("%d %d %d\n", c,a,b);
+}
+else
+{printf("%d %d %d\n", c,b,a);
+}
+}
+else if (d=1)
+{
+if (a>=b && b>=c)
+{
+printf("%d %d %d\n", c,a,b);
+}
+else if (a>=c && c>=b)
+{printf("%d %d %d\n", b,c,a);
+}
+else if (b>=a && a>=c)
+{printf("%d %d %d\n", c,a,b);
+}
+else if (b>=c && c>=a)
+{printf("%d %d %d\n", a,c,b);
+}
+else if (c>=a && a>=b)
+{printf("%d %d %d\n", b,a,c);
+}
+else
+{printf("%d %d %d\n", a,b,c);
+}
+}
+return 0;
+}
