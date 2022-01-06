@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+char a;
+int b,d;
+long long c;
+printf("choose data type: char (1), int (2), or long long (3)");
+fflush(stdout);
+scanf("%d", &d);
+        if (d==1)
+                {
+                char f=0;
+                char e=1;
+                char g;
+printf("please insert number\n");
+fflush(stdout);
+scanf("%hhu", &a);
+printf("your number is %hhu\n", a);
+while(f<a){
+f++;
+g=e;
+e=e*f;
+if(e/f<g)
+{printf("error\n");
+return 1;
+}
+else
+{
+printf("factorial of %hhu is %hhu\n", a,e);
+}
+}
+}
+        if (d==2)
+                {
+                int f=0;
+                int e=1;
+                int g;
+printf("please insert number\n");
+fflush(stdout);
+scanf("%d", &b);
+printf("your number is %d\n", b);
+while(f<b){
+f++;
+g=e;
+e=e*f;
+if(e/f<g)
+{printf("error\n");
+return 1;
+}
+else
+{
+printf("factorial of %d is %d\n", b,e);
+}
+}
+}
+
+        if (d==3)
+                {
+                long long f=0;
+                long long e=1;
+                long long g;
+printf("please insert number\n");
+fflush(stdout);
+scanf("%lld", &c);
+printf("your number is %lld\n", c);
+while(f<c){
+f++;
+g=e;
+e=e*f;
+if(e/f<g)
+{printf("error\n");
+return 1;
+}
+else
+{
+printf("factorial of %lld is %lld\n", c,e);
+}
+}
+}
+return 0;
+}
