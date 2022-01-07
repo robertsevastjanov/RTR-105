@@ -21,11 +21,11 @@ fourth();
 return 0;
 }
 int fourth(){
-int c,d,e;
-printf("insert two integer numbers\n");
+int c,e;
+printf("insert integer number\n");
 fflush(stdout);
-scanf("%d and %d", &c, &d);
-e=c*d;
-printf("product of %d and %d is %d\n", c, d, e);
+scanf("%d, &c);
+e=c*c;
+printf("square of %d is %d\n", c, e);
 return 0;
 }
