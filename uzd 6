@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+void first(){
+char first(){
+printf("funkcija bez argumentiem un bez return\n");
+}
+}
+void second(){
+char second(){
+int a,b;
+printf("insert two integer numbers\n");
+fflush(stdout);
+scanf("%d, %d", &a, &b);
+printf("product of %d and %d is %d\n", a, b, a*b);
+}
+}
+int main(){
+printf("hello world\n");
+fourth();
+return 0;
+}
+int fourth(){
+int c,d,e;
+printf("insert two integer numbers\n");
+fflush(stdout);
+scanf("%d and %d", &c, &d);
+e=c*d;
+printf("product of %d and %d is %d\n", c, d, e);
+return 0;
+}
