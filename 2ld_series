@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+    float a=0.01, b=1.5*M_PI, x, delta_x=1.e-3/*0.001*/, funkca, funkcb, funkcx;
+    int k=0;
+
+    funkca = asin(a); funkcb = asin(b);
+    if(funkca*funkcb>0){
+        printf("Intervaalaa [%.2f;%.2f] asin(x) funkcijai",a,b);
+        printf("saknju nav (vai taajaa ir paaru saknju skaits)\n");
+        return 1;
+    }
+
+    printf("        asin(%7.3f)=%7.3f\t\t\t\t",a,sin(a));
+    printf("asin(%7.3f)=%7.3f\n",b,asin(b));
+
+    while((b-a)>delta_x){
+        k++;//k=k+1;//k+=1;
+        x=(a+b)/2;
+if(funkca*asin(x)>0)//pie a=0 -> funkca=0 -> reizinaajums ir reciizi 0 visu laiku -> visu laiku "straadaa" b=x
+a=x;
+else
+b=x;
+printf("%2d. iteraacija: asin(%7.3f)=%7.3f\t",k,a,asin(a));
+printf("asin(%7.3f)=%7.3f\t",x,asin(x));
+printf("asin(%7.3f)=%7.3f\n",b,asin(b));     
+    }
+    printf("Sakne atrodas ie x=%.3f, jo asin(x) ir %.3f\n",x,asin(x));
+    return 0;
+}
+
+
+#include<stdio.h>
+#include<math.h>
+float modified_asin(float x, float A) {
+    return asin(x)-A;
+}
+int main(){
+    float a=0.01, b=1.5*M_PI, x, delta_x=1.e-3/*0.001*/, funkca, funkcb, funkcx;
+    int k=0;
+
+    funkca = asin(a); funkcb = asin(b);
+    if(funkca*funkcb>0){
+        printf("Intervaalaa [%.2f;%.2f] asin(x) funkcijai",a,b);
+        printf("saknju nav (vai taajaa ir paaru saknju skaits)\n");
+        return 1;
+    }
+
+    printf("        asin(%7.3f)=%7.3f\t\t\t\t",a,sin(a));
+    printf("asin(%7.3f)=%7.3f\n",b,asin(b));
+
+    while((b-a)>delta_x){
+        k++;//k=k+1;//k+=1;
+        x=(a+b)/2;
+if(funkca*asin(x)>0)//pie a=0 -> funkca=0 -> reizinaajums ir reciizi 0 visu laiku -> visu laiku "straadaa" b=x
+a=x;
+else
+b=x;
+printf("%2d. iteraacija: asin(%7.3f)=%7.3f\t",k,a,asin(a));
+printf("asin(%7.3f)=%7.3f\t",x,asin(x));
+printf("asin(%7.3f)=%7.3f\n",b,asin(b));     
+    }
+    void gu();{
+        float a,x,delta_x,b,y,A;
+        a=0;
+        b=2*M_PI;
+
+        printf("Cien liet., luudzu, ievadi A veertiibu vienadojumam:asin(x)=A\n:");
+        scanf("%f",&A);
+        if(-1<A<1){
+        x=a;
+        delta_x=0.1;
+        printf("\tx\ty\n");
+        while(x<b)
+        {
+            printf("10.1f%10.1f\n",x,modified_asin(x,A));
+            
+            x+=delta_x;
+        }
+        }
+    else{
+            printf("error");
+            return 1;
+    }
+    printf("Sakne atrodas ie x=%.3f, jo asin(x) ir %.3f\n",x,asin(x));
+    return 0;
+}
+}
+
