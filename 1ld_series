@@ -1,0 +1,204 @@
+#include<stdio.h>
+#include<math.h>
+void main(){
+double x=0.5,y,a0,a1,a2,a3,S0,S1,S2,S3;
+y = asin(x);
+printf("y=asin(%.2f)=%2.f\n",x,y);
+
+a0=(1)*pow(x,1)/(1);
+S0 = a0;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a0,S0);
+
+a1=(1)*pow(x,3)/(6);
+S1 = a1;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a1,S1);
+
+a2=(3)*pow(x,5)/(40);
+S2 = a2;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a2,S2);
+
+a3=(5)*pow(x,7)/(112);
+S3 = a3;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a3,S3);
+}
+
+// S0, S1, S2, S3 -> S
+#include<stdio.h>
+#include<math.h>
+void main(){
+double x=0.5,y,a0,a1,a2,a3,S;
+y=asin(x);
+printf("y=asin(%.2f)=%2.f\n",x,y);
+
+a0=(1)*pow(x,1)/(1);
+S=a0;//S0=a0;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a0,S);
+
+a1=(1)*pow(x,3)/(6);
+S=S+a1;//S1=a0+a1; // S+=a1
+printf("%.2f\t%8.2f\t%8.2f\n",x,a1,S);
+
+a2=(3)*pow(x,5)/(40);
+S=S+a2;//S2=a0+a1+a2; // S+=a2;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a2,S);
+
+a3=(5)*pow(x,7)/(112);
+S=S+a3;//S3=a0+a1+a2+a3;//S+=a3;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a3,S);
+}
+
+// a0, a1, a2, a3 -> a
+#include<stdio.h>
+#include<math.h>
+void main(){
+double x=0.5,y,a,S;
+y=asin(x);
+printf("y=asin(%.2f)=%2.f\n",x,y);
+
+a=(1)*pow(x,1)/(1);//a0=(1)*pow(x,1)/(1);
+S=a;//S=a0;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+
+a=(1)*pow(x,3)/(6);//a1=(1)*pow(x,3)/(6);
+S=S+a;//S=S+a1;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+
+a=(3)*pow(x,5)/(40);//a2=(3)*pow(x,5)/(40);
+S=S+a;//S=S+a2; 
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+
+a=(5)*pow(x,7)/(112);//a3=(5)*pow(x,7)/(112);
+S=S+a;//S=S+a3;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+}
+
+#include<stdio.h>
+#include<math.h>
+void main(){
+double x=0.5,y,a,S;
+int k=0;
+y=asin(x);
+printf("y=asin(%.2f)=%2.f\n",x,y);
+
+a=(1)*pow(x,1)/(1);//a0=(1)*pow(x,1)/(1);
+S=a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+k++;
+a=a*(2*k)*(2*k-1)*x*x*(2*k-1)/(4*k*k*(2*k+1));//a=a*(2)*(1)*x*x*(1)/(4*k*k*(3));
+S=S+a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+k++;
+a=a*(2*k)*(2*k-1)*x*x*(2*k-1)/(4*k*k*(2*k+1));//a=a*(4)*(3)*x*x*(3)/(4*k*k*(5));
+S=S+a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+k++;
+a=a*(2*k)*(2*k-1)*x*x*(2*k-1)/(4*k*k*(2*k+1));//a=a*(6)*(5)*x*x*(5)/(4*k*k*(7));
+S=S+a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+}
+
+#include<stdio.h>
+#include<math.h>
+void main(){
+double x=0.5,y,a,S;
+int k=0;
+y=asin(x);
+printf("y=asin(%.2f)=%2.f\n",x,y);
+
+a=(1)*pow(x,1)/(1);
+S=a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+
+while(k<3){
+k++;
+a=a*(2*k)*(2*k-1)*x*x*(2*k-1)/(4*k*k*(2*k+1));
+S=S+a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+}
+}
+
+#include<stdio.h>
+#include<math.h>
+double mans_arcsinuss(double x){
+double a,S;
+int k=0;
+a=(1)*pow(x,1)/((4,k)*1*(2*k+1));
+S=a;
+printf("y=asin(%.2f)=%2.f\n",x,a,S);
+
+while(k<3){
+k++;
+a=a*(2*k)*(2*k-1)*x*x*(2*k-1)/(4*k*k*(2*k+1));
+S=S+a;
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+}
+return S;
+}
+
+void main(){
+double x=0.5,y,yy;
+y=asin(x);
+printf("standarta funkcija asin - y=asin(%.2f)=%2.f\n",x,y);
+
+y=mans_arcsinuss(x);
+printf("lietotaaja funkcija - y=mans_arcsinuss(%.2f)=%2.f\n",x,yy);
+}
+
+#include<stdio.h>
+#include<math.h>
+double mans_arcsinuss(double x){
+double a,S;
+int k=0;
+fflush(stdout);
+scanf("please insert x %x", &x);
+if(x<-1)
+{printf("error\n");
+return 1;
+}
+else if(x>1)
+{
+printf("error\n");
+return 1;
+}
+}
+a=(1)*pow(x,1)/((4,k)*1*(2*k+1));
+S=a;
+printf("y=asin(%.2f)=%2.f\n",x,a,S);
+
+while(k<500){
+k++;
+a=a*(2*k)*(2*k-1)*x*x*(2*k-1)/(4*k*k*(2*k+1));
+S=S+a;
+if (k=499){
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+}
+else if(k=500){
+printf("%.2f\t%8.2f\t%8.2f\n",x,a,S);
+}
+}
+return S;
+}
+
+void main(){
+double x=0.5,y,yy;
+y=asin(x);
+printf("standarta funkcija asin - y=asin(%.2f)=%2.f\n",x,y);
+
+y=mans_arcsinuss(x);
+printf("lietotaaja funkcija - y=mans_arcsinuss(%.2f)=%2.f\n",x,yy);
+printf("x belongs to [-1;1]");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
